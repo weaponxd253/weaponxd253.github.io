@@ -210,6 +210,14 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+.about .resume-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about .resume-links .btn {
+    margin: 0 10px;
+}
 
 .portfolio .projects {
     display: flex;
@@ -399,8 +407,6 @@ img.profile-img {
     margin: 0 auto; /* Center the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a better look */
 }
-
-/* Add these styles to your existing CSS */
 
 .back-to-top {
     position: fixed;
