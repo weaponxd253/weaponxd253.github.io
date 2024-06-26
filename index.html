@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/myLogo.jpg" alt="Logo">
+                <span>Xavier Denson</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switcher">
+                <button id="themeSwitcher">
+                    <span id="themeSwitcherIcon" class="icon">🌙</span> Switch Theme
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a Web Developer passionate about creating beautiful and functional websites.</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <img src="assets/images/myLogo.jpg" alt="Profile Picture" class="profile-img">
+            <p>Hello! I'm Xavier Denson, a dedicated and passionate software development professional with a robust background in software support, quality assurance, and development. I hold a Bachelor of Science in Software Development and an Associate in Information Technology-Systems & Security from Green River College, as well as an Associate in Information Technology from Pierce College.</p>
+            <p>With over five years of diverse experience in the tech industry, I've honed my skills in software support, quality assurance, and development through various roles. Currently, I serve as a Software Support Specialist at Aero Controls, where I execute SQL scripts, manage support tickets, and ensure data integrity and system performance. My previous experience includes working as a Software Quality Assurance Engineer at Heritage Bank, where I significantly improved production times through automated testing, and as a Software Developer Intern at Costco, where I implemented key features and participated in Agile development processes.</p>
+            <p>My technical expertise includes proficiency in Java, JavaScript, SQL, and MySQL, along with hands-on experience with tools like Docker and Jira. I have a strong foundation in user acceptance testing, hardware/software troubleshooting, and UX research methods and design.</p>
+            <p>I'm committed to continuous learning and improvement, always seeking ways to enhance efficiency and user satisfaction in every project I undertake. My problem-solving skills and collaborative approach have consistently contributed to the success of the teams I've been part of.</p>
+            <p>In my free time, I enjoy exploring new technologies and staying updated with the latest trends in software development. I'm also an avid supporter of open-source projects and enjoy contributing to the tech community.</p>
+            <p>Feel free to connect with me on LinkedIn or reach out via email at <a href="mailto:xdenson253@outlook.com">xdenson253@outlook.com</a>. Let's collaborate and create something amazing together!</p>
+        </div>
+    </section>
+    
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="assets/images/Beesbakry.JPG" alt="bakery image">
+                    <h3>Bee's Bakery</h3>
+                    <p>Delightful bakery app: seamless ordering, quick delivery</p>
+                    <button class="btn" onclick="openModal('myModal1')">View Slideshow</button>
+                    <button class="btn" onclick="openDescriptionModal('descriptionModal1')">View Description</button>
+                </div>
+                <div class="project">
+                    <img src="assets/images/petFinder.JPG" alt="PetFinder image">
+                    <h3>PetFinder App</h3>
+                    <p>Connecting potential pet owners with animals in need of a home.</p>
+                    <button class="btn" onclick="openModal('myModal2')">View Slideshow</button>
+                    <button class="btn" onclick="openDescriptionModal('descriptionModal2')">View Description</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-media">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Xavier Denson. All rights reserved.</p>
+            <button id="loginButton" class="btn">Admin Login</button>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑ Back to Top</button>
+
+    <div id="loginModal" class="modal">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="postModal" class="modal">
+        <span class="close" onclick="closeModal('postModal')">&times;</span>
+        <div class="modal-content">
+            <h2 id="modalTitle">Add New Post</h2>
+            <form id="postForm">
+                <label for="postTitle">Title</label>
+                <input type="text" id="postTitle" name="title" placeholder="Enter post title" required>
+
+                <label for="postContent">Content</label>
+                <textarea id="postContent" name="content" placeholder="Enter post content" required></textarea>
+
+                <button type="submit">Save Post</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="myModal1" class="modal">
+        <span class="close" onclick="closeModal('myModal1')">&times;</span>
+        <div class="modal-content">
+            <!-- Add content for Bee's Bakery slideshow -->
+            <h2>Bee's Bakery Slideshow</h2>
+            <!-- Slideshow content here -->
+        </div>
+    </div>
+
+    <div id="descriptionModal1" class="modal">
+        <span class="close" onclick="closeModal('descriptionModal1')">&times;</span>
+        <div class="modal-content">
+            <h2>Bea's Bakery Description</h2>
+            <h3>Overview</h3>
+            <ul>
+                <li>Bea's Bakery mobile application provides a delightful and intuitive experience for users to explore and order a variety of bakery items. The design ensures a seamless navigation through categories, customization options, and an easy checkout process.</li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <h4>Home Screen</h4>
+            <ul>
+                <li><strong>Promotions and Deals:</strong> Highlights daily deals and special offers with an attractive visual display.</li>
+                <li><strong>Category Navigation:</strong> Allows users to quickly browse through different categories like cakes, cookies, and cupcakes with a swipe functionality.</li>
+            </ul>
+            
+            <h4>Category Browsing</h4>
+            <ul>
+                <li><strong>Visual Category Listings:</strong> Users can browse through tasty categories with appealing images representing each section, such as cookies, cupcakes, cakes, healthy options, and more.</li>
+                <li><strong>Easy Navigation:</strong> Simple and clean interface to move between different categories and select items.</li>
+            </ul>
+            
+            <h4>Order Customization</h4>
+            <ul>
+                <li><strong>Customization Options:</strong> Users can personalize their orders by selecting from various sizes, icing preferences, and adding special requests or messages on cakes.</li>
+                <li><strong>Interactive Elements:</strong> Engaging and interactive UI elements to choose the desired customization easily.</li>
+            </ul>
+            
+            <h4>Order Confirmation</h4>
+            <ul>
+                <li><strong>Payment Details:</strong> Clearly displays the breakdown of costs including the price of items, tips, and total amount.</li>
+                <li><strong>Payment Methods:</strong> Multiple payment options including Credit/Debit cards, PayPal, and cash on delivery.</li>
+                <li><strong>Order Preview:</strong> Visual preview of the order to ensure accuracy before confirming.</li>
+            </ul>
+            
+            <h4>Order Summary</h4>
+            <ul>
+                <li><strong>Summary Display:</strong> Summarizes the order details including items ordered, payment details, and estimated time for completion.</li>
+                <li><strong>Edit and Confirm:</strong> Option to edit the order or proceed to confirm with a final visual confirmation.</li>
+            </ul>
+            
+            <h3>Design Aesthetics</h3>
+            <ul>
+                <li><strong>Color Scheme:</strong> A fresh and vibrant green and pink color palette to create a lively and appetizing visual appeal.</li>
+                <li><strong>Typography:</strong> Playful yet readable fonts to maintain a balance between fun and usability.</li>
+                <li><strong>Imagery:</strong> High-quality images of bakery items to entice users and enhance the browsing experience.</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+
+    <div id="myModal2" class="modal">
+        <span class="close" onclick="closeModal('myModal2')">&times;</span>
+        <div class="modal-content">
+            <!-- Add content for PetFinder slideshow -->
+            <h2>PetFinder Slideshow</h2>
+            <!-- Slideshow content here -->
+        </div>
+    </div>
+
+    <div id="descriptionModal2" class="modal">
+        <span class="close" onclick="closeModal('descriptionModal2')">&times;</span>
+        <div class="modal-content">
+            <h2>Pet Finder Description</h2>
+            
+            <h3>Overview</h3>
+            <ul>
+                <li>The Pet Finder app is a user-friendly platform that connects pet lovers with their ideal companions. Featuring a visually appealing home screen with prominent images of pets and essential details, users can easily browse through various options. The minimalist navigation menu provides easy access to Home, Browse, Surprises, and Contact sections. Users can quickly find pets using the search and browse functionality, which categorizes pets by type. Additionally, the app offers a seamless shopping experience with pet-related products and a contact page for inquiries. Detailed pet pages with comprehensive information and images encourage users to adopt their new pets.</li>
+            </ul>
+            
+            <h3>Home Screen (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Visually Appealing Design:</strong></li>
+                <ul>
+                    <li>Prominent image of featured pets</li>
+                </ul>
+                <li><strong>Navigation Arrows:</strong></li>
+                <ul>
+                    <li>Left and right arrows for scrolling through featured pets</li>
+                </ul>
+                <li><strong>Essential Pet Information:</strong></li>
+                <ul>
+                    <li>Name and breed of each featured pet</li>
+                    <li>"Read More" button for additional details</li>
+                </ul>
+                <li><strong>Social Media Icons:</strong></li>
+                <ul>
+                    <li>Located at the bottom of the screen for easy sharing</li>
+                </ul>
+                <li><strong>Link to "About Us" Page:</strong></li>
+                <ul>
+                    <li>Accessible at the bottom of the screen</li>
+                </ul>
+            </ul>
+            
+            <h3>Navigation Menu (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Hamburger Icon:</strong></li>
+                <ul>
+                    <li>Access to the navigation menu</li>
+                </ul>
+                <li><strong>Slide-Out Menu:</strong></li>
+                <ul>
+                    <li>Options for:</li>
+                    <ul>
+                        <li>Home</li>
+                        <li>Browse</li>
+                        <li>Surprises</li>
+                        <li>Contact</li>
+                    </ul>
+                </ul>
+                <li><strong>Minimalist Design:</strong></li>
+                <ul>
+                    <li>Ensures easy navigation</li>
+                    <li>Keeps user interface clean and uncluttered</li>
+                </ul>
+            </ul>
+            
+            <h3>Browse Screen (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Search Bar:</strong></li>
+                <ul>
+                    <li>Allows users to find pets quickly</li>
+                </ul>
+                <li><strong>Category Selection:</strong></li>
+                <ul>
+                    <li>Options include:</li>
+                    <ul>
+                        <li>Dogs</li>
+                        <li>Cats</li>
+                        <li>Bunnies</li>
+                        <li>Reptiles</li>
+                        <li>Other</li>
+                    </ul>
+                </ul>
+                <li><strong>Featured Pets Display:</strong></li>
+                <ul>
+                    <li>Thumbnail image</li>
+                    <li>Name and breed</li>
+                    <li>Brief description</li>
+                </ul>
+                <li><strong>Detailed Information:</strong></li>
+                <ul>
+                    <li>"More Info" button for each pet</li>
+                </ul>
+            </ul>
+            
+            <h3>Product Page (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Seamless Integration:</strong></li>
+                <ul>
+                    <li>Showcases pet-related products available for purchase</li>
+                </ul>
+                <li><strong>Product Listings:</strong></li>
+                <ul>
+                    <li>Product name</li>
+                    <li>Price</li>
+                    <li>Brief description</li>
+                </ul>
+                <li><strong>Add to Cart Functionality:</strong></li>
+                <ul>
+                    <li>"Add to Cart" button for easy shopping</li>
+                </ul>
+                <li><strong>Enhanced App Functionality:</strong></li>
+                <ul>
+                    <li>Combines pet adoption with a shopping experience</li>
+                </ul>
+            </ul>
+            
+            <h3>Contact Us Page (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Contact Form:</strong></li>
+                <ul>
+                    <li>Fields for name, email, and message</li>
+                </ul>
+                <li><strong>Submit Button:</strong></li>
+                <ul>
+                    <li>Allows users to send their inquiries or messages</li>
+                </ul>
+            </ul>
+            
+            <h3>Pet Detail Page (Desktop and Mobile)</h3>
+            <ul>
+                <li><strong>Pet Information:</strong></li>
+                <ul>
+                    <li>Detailed information about the pet, including name, breed, and description</li>
+                    <li>Additional images of the pet</li>
+                </ul>
+                <li><strong>Call to Action:</strong></li>
+                <ul>
+                    <li>"Meet me" button to encourage adoption or further interaction</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
