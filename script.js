@@ -200,3 +200,19 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to(window, { duration: 1, scrollTo: { y: 0 }, ease: 'power2.inOut' });
     });
 });
+
+
+// Existing code...
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Slick Carousel for the slideshows
+    $('.slideshow').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+
+    // Existing code...
+});
