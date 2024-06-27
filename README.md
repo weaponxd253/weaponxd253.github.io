@@ -14,11 +14,11 @@ In my free time, I enjoy exploring new technologies, staying updated with the la
 
 ### Bee's Bakery UX Project
 Delightful bakery app: seamless ordering, quick delivery.
-- [Project Page](https://weaponxd253.github.io/bees-bakery)
+
 
 ### PetFinder UX Project
 Connecting potential pet owners with animals in need of a home.
-- [Project Page](https://weaponxd253.github.io/petfinder)
+
 
 ### Weather Site Using API
 A comprehensive weather forecasting application.
