@@ -389,7 +389,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slide-down 0.4s ease-in-out;
-    overflow: auto; /* Ensures content is scrollable if it exceeds the modal's height */
+    overflow: auto;
 }
 
 .modal-content h2 {
@@ -437,7 +437,6 @@ footer {
     cursor: pointer;
 }
 
-/* Ensure the buttons styling also works in dark mode */
 [data-theme="dark"] #openAddPostModal,
 [data-theme="dark"] .posts .post .actions .btn {
     background: var(--primary-color);
@@ -450,12 +449,12 @@ footer {
 }
 
 img.profile-img {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 50%; /* Make the image circular */
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
     display: block;
-    margin: 0 auto; /* Center the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a better look */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .back-to-top {
@@ -476,8 +475,6 @@ img.profile-img {
 .back-to-top:hover {
     background-color: var(--secondary-color);
 }
-
-/* Existing styles... */
 
 .slideshow iframe {
     width: 100%;

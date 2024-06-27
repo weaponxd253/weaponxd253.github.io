@@ -1,4 +1,3 @@
-// Function to reset the form
 function resetForm() {
     const postForm = document.getElementById('postForm');
     if (postForm) {
@@ -9,7 +8,6 @@ function resetForm() {
     currentPostId = null;
 }
 
-// Function to open a modal with GSAP animation
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     gsap.to(modal, {
@@ -29,7 +27,6 @@ function openModal(modalId) {
     });
 }
 
-// Function to close a modal with GSAP animation
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     gsap.to(modal.querySelector('.modal-content'), {
@@ -50,7 +47,6 @@ function closeModal(modalId) {
     resetForm();
 }
 
-// Function to open description modal with GSAP animation
 function openDescriptionModal(descriptionModalId) {
     const modal = document.getElementById(descriptionModalId);
     gsap.to(modal, {
@@ -70,7 +66,6 @@ function openDescriptionModal(descriptionModalId) {
     });
 }
 
-// Make the functions globally accessible
 window.openModal = openModal;
 window.closeModal = closeModal;
 window.openDescriptionModal = openDescriptionModal;
@@ -119,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = document.getElementById('themeSwitcherIcon');
         icon.textContent = newTheme === 'dark' ? '🌞' : '🌙';
 
-        // GSAP animations
         gsap.to(root, {
             duration: 0.5,
             '--background-color': getComputedStyle(document.documentElement).getPropertyValue(`--background-color-${newTheme}`),
@@ -131,17 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
             '--section-background': getComputedStyle(document.documentElement).getPropertyValue(`--section-background-${newTheme}`)
         });
 
-        // Animating the header and footer
         gsap.fromTo("header", { opacity: 0 }, { opacity: 1, duration: 0.5 });
         gsap.fromTo("footer", { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
-        // Ensure sections exist before animating
         const sections = document.querySelectorAll('section');
         if (sections.length > 0) {
             gsap.fromTo(sections, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, stagger: 0.2 });
         }
 
-        // Animating individual elements within sections
         sections.forEach(section => {
             const headers = section.querySelectorAll('h2');
             const paragraphs = section.querySelectorAll('p');
@@ -168,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         root.setAttribute('data-theme', newTheme);
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -179,14 +169,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 1,
                 scrollTo: {
                     y: targetElement,
-                    offsetY: 70 // Adjust this offset if you have a fixed header
+                    offsetY: 70
                 },
                 ease: 'power2.inOut'
             });
         });
     });
 
-    // Show/Hide Back to Top button based on scroll position
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             gsap.to(backToTopButton, { duration: 0.5, opacity: 1, display: 'block' });
@@ -195,17 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Scroll to top when Back to Top button is clicked
     backToTopButton.addEventListener('click', () => {
         gsap.to(window, { duration: 1, scrollTo: { y: 0 }, ease: 'power2.inOut' });
     });
-});
 
-
-// Existing code...
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Slick Carousel for the slideshows
     $('.slideshow').slick({
         dots: true,
         infinite: true,
@@ -213,6 +195,4 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToShow: 1,
         adaptiveHeight: true
     });
-
-    // Existing code...
 });

@@ -56,24 +56,30 @@
         </div>
     </section>
     
-
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2>My Work</h2>
             <div class="projects">
                 <div class="project">
                     <img src="assets/images/Beesbakry.JPG" alt="bakery image">
-                    <h3>Bee's Bakery</h3>
+                    <h3>Bee's Bakery UX project</h3>
                     <p>Delightful bakery app: seamless ordering, quick delivery</p>
                     <button class="btn" onclick="openModal('myModal1')">View Slideshow</button>
                     <button class="btn" onclick="openDescriptionModal('descriptionModal1')">View Description</button>
                 </div>
                 <div class="project">
                     <img src="assets/images/petFinder.JPG" alt="PetFinder image">
-                    <h3>PetFinder App</h3>
+                    <h3>PetFinder UX Project</h3>
                     <p>Connecting potential pet owners with animals in need of a home.</p>
                     <button class="btn" onclick="openModal('myModal2')">View Slideshow</button>
                     <button class="btn" onclick="openDescriptionModal('descriptionModal2')">View Description</button>
+                </div>
+                <div class="project">
+                    <img src="assets/images/weather_site_thumbnail.jpg" alt="Weather Site Thumbnail">
+                    <h3>Weather Site using API</h3>
+                    <p>A comprehensive weather forecasting application.</p>
+                    <button class="btn" onclick="openModal('weatherSiteModal')">View Site example</button>
+                    <button class="btn" onclick="openDescriptionModal('weatherDescriptionModal')">View Description</button>
                 </div>
             </div>
         </div>
@@ -352,6 +358,44 @@
                     <li>"Meet me" button to encourage adoption or further interaction</li>
                 </ul>
             </ul>
+        </div>
+    </div>
+
+    <div id="weatherSiteModal" class="modal">
+        <span class="close" onclick="closeModal('weatherSiteModal')">&times;</span>
+        <div class="modal-content">
+            <a href="https://weaponxd253.github.io/weather-site/" target="_blank" class="btn">View Full Site</a>
+            <div class="slideshow">
+                <div>
+                    <iframe src="https://weaponxd253.github.io/weather-site/" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="weatherDescriptionModal" class="modal">
+        <span class="close" onclick="closeModal('weatherDescriptionModal')">&times;</span>
+        <div class="modal-content">
+            <h2>Weather Site Example</h2>
+        <iframe src="https://weaponxd253.github.io/weather-site/" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
+        <h3>Weather App: UX-Friendly Weather Forecasting</h3>
+        <p>The Weather App is designed with a user-centric approach, providing an intuitive and seamless experience for accessing real-time weather data and forecasts. The interface is clean and responsive, ensuring ease of use across various devices.</p>
+        <h4>Key Features:</h4>
+        <ul>
+            <li><strong>Dynamic City Search:</strong> Utilizes Awesomplete for instant city suggestions as you type.</li>
+            <li><strong>Real-Time Weather Data:</strong> Displays current weather conditions, including temperature, humidity, and wind speed.</li>
+            <li><strong>5-Day Forecast:</strong> Offers a detailed 5-day weather forecast.</li>
+            <li><strong>Weather Themes:</strong> Automatically adjusts the theme based on weather conditions for an engaging visual experience.</li>
+            <li><strong>Accessibility:</strong> Includes features like ARIA labels and descriptions for better accessibility.</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <ul>
+            <li><strong>HTML & CSS:</strong> For a clean and responsive layout.</li>
+            <li><strong>JavaScript & GSAP:</strong> For dynamic functionality and animations.</li>
+            <li><strong>OpenWeather API:</strong> To fetch real-time weather data.</li>
+        </ul>
+        <p>Visit the Weather App to explore its features. For any queries or support, feel free to contact us.</p>
+    </div>
         </div>
     </div>
 
