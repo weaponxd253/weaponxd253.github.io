@@ -282,12 +282,13 @@ header nav ul li a:hover {
     text-align: center;
     border-radius: 10px;
     background: var(--section-background);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 .portfolio .project:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: var(--background-color);
 }
 
 .portfolio .project img {
@@ -295,18 +296,33 @@ header nav ul li a:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    transition: filter 0.3s;
+}
+
+.portfolio .project:hover img {
+    filter: brightness(0.8);
 }
 
 .portfolio .project h3 {
     margin-top: 15px;
     font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.portfolio .project:hover h3 {
+    color: var(--primary-color);
 }
 
 .portfolio .project p {
     margin-top: 10px;
     font-size: 1rem;
     color: #777;
-    margin-bottom: 20px; /* Add margin-bottom for spacing */
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.portfolio .project:hover p {
+    color: var(--secondary-color);
 }
 
 .portfolio .project .btn {
@@ -316,12 +332,14 @@ header nav ul li a:hover {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .portfolio .project .btn:hover {
     background: var(--secondary-color);
+    transform: scale(1.05);
 }
+
 
 
 
@@ -497,3 +515,4 @@ img.profile-img {
         flex: 1 1 100%;
     }
 }
+

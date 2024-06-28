@@ -196,3 +196,26 @@ document.addEventListener('DOMContentLoaded', () => {
         adaptiveHeight: true
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // GSAP animations for project cards
+    const projectCards = document.querySelectorAll('.portfolio .project');
+    
+    projectCards.forEach((card, index) => {
+        gsap.fromTo(card, 
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: 'power2.inOut',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            }
+        );
+    });
+});
