@@ -36,8 +36,5 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/xavier-de
 
 ## Acknowledgments
 
-Special thanks to all the mentors, collaborators, and organizations that have supported me throughout my journey. Your guidance and support have been invaluable.
+Special thanks to my professors at Green River College and Pierce College ! 
 
----
-
-© 2024 Xavier Denson. All rights reserved.
