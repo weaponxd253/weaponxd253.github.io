@@ -219,3 +219,141 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const splashPage = document.getElementById('splashPage');
+    const splashLogo = document.querySelector('.splash-logo');
+    const splashHeading = document.querySelector('.splash-content h1');
+    const splashParagraph = document.querySelector('.splash-content p');
+    const enterButton = document.getElementById('enterButton');
+
+    // Animate splash content on load
+    gsap.to(splashLogo, { duration: 1, opacity: 1, y: 0 });
+    gsap.to(splashHeading, { duration: 1, opacity: 1, y: 0, delay: 0.3 });
+    gsap.to(splashParagraph, { duration: 1, opacity: 1, y: 0, delay: 0.6 });
+    gsap.to(enterButton, { duration: 1, opacity: 1, y: 0, delay: 0.9 });
+
+    enterButton.addEventListener('click', () => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    });
+
+    // Optionally, automatically hide the splash page after a delay
+    setTimeout(() => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    }, 3000); // delay in milliseconds (e.g., 3 seconds)
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    const splashPage = document.getElementById('splashPage');
+    const splashLogo = document.querySelector('.splash-logo');
+    const splashHeading = document.querySelector('.splash-content h1');
+    const splashParagraph = document.querySelector('.splash-content p');
+    const enterButton = document.getElementById('enterButton');
+
+    // Show the indicator initially
+    gsap.to(scrollIndicator, { duration: 1, opacity: 1 });
+
+    // Hide the indicator after scrolling
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            gsap.to(scrollIndicator, { duration: 0.5, opacity: 0, onComplete: () => scrollIndicator.classList.add('hidden') });
+        } else {
+            gsap.to(scrollIndicator, { duration: 0.5, opacity: 1, onComplete: () => scrollIndicator.classList.remove('hidden') });
+        }
+    });
+
+    // Animate splash content on load
+    gsap.to(splashLogo, { duration: 1, opacity: 1, y: 0 });
+    gsap.to(splashHeading, { duration: 1, opacity: 1, y: 0, delay: 0.3 });
+    gsap.to(splashParagraph, { duration: 1, opacity: 1, y: 0, delay: 0.6 });
+    gsap.to(enterButton, { duration: 1, opacity: 1, y: 0, delay: 0.9 });
+
+    enterButton.addEventListener('click', () => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    });
+
+    // Optionally, automatically hide the splash page after a delay
+    setTimeout(() => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    }, 3000); // delay in milliseconds (e.g., 3 seconds)
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactLink = document.getElementById('contactLink');
+    
+    contactLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = 'mailto:xdenson253@outlook.com?subject=Contacting%20You&body=Hi%20Xavier,%0A%0AI%20would%20like%20to%20discuss...';
+    });
+
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    const splashPage = document.getElementById('splashPage');
+    const splashLogo = document.querySelector('.splash-logo');
+    const splashHeading = document.querySelector('.splash-content h1');
+    const splashParagraph = document.querySelector('.splash-content p');
+    const enterButton = document.getElementById('enterButton');
+
+    // Show the indicator initially
+    gsap.to(scrollIndicator, { duration: 1, opacity: 1 });
+
+    // Hide the indicator after scrolling
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            gsap.to(scrollIndicator, { duration: 0.5, opacity: 0, onComplete: () => scrollIndicator.classList.add('hidden') });
+        } else {
+            gsap.to(scrollIndicator, { duration: 0.5, opacity: 1, onComplete: () => scrollIndicator.classList.remove('hidden') });
+        }
+    });
+
+    // Animate splash content on load
+    gsap.to(splashLogo, { duration: 1, opacity: 1, y: 0 });
+    gsap.to(splashHeading, { duration: 1, opacity: 1, y: 0, delay: 0.3 });
+    gsap.to(splashParagraph, { duration: 1, opacity: 1, y: 0, delay: 0.6 });
+    gsap.to(enterButton, { duration: 1, opacity: 1, y: 0, delay: 0.9 });
+
+    enterButton.addEventListener('click', () => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    });
+
+    // Optionally, automatically hide the splash page after a delay
+    setTimeout(() => {
+        gsap.to(splashPage, {
+            duration: 1,
+            opacity: 0,
+            onComplete: () => {
+                splashPage.style.display = 'none';
+            }
+        });
+    }, 3000); // delay in milliseconds (e.g., 3 seconds)
+});

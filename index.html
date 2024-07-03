@@ -10,7 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
 </head>
 <body>
-    <header>
+    <div id="splashPage" class="splash-page">
+        <div class="splash-content">
+            <img src="assets/images/myLogo.jpg" alt="Logo" class="splash-logo">
+            <h1>Hi, I'm Xavier Denson!</h1>
+            <p>
+                Web Developer Extraordinaire<br>
+                Welcome to my portfolio! I specialize in creating elegant, user-friendly websites with a strong focus on both front-end and back-end development. Explore my projects and let's build something amazing together!
+            </p>
+            <button id="enterButton" class="btn">Enter</button>
+        </div>
+    </div>
+    
+    <<header>
         <div class="container">
             <div class="logo">
                 <img src="assets/images/myLogo.jpg" alt="Logo">
@@ -20,7 +32,8 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#portfolio"">Projects</a></li>
+                    <li><a href="#" id="contactLink">Contact</a></li>
                 </ul>
             </nav>
             <div class="theme-switcher">
@@ -78,7 +91,7 @@
                     <img src="assets/images/weather_site_thumbnail.jpg" alt="Weather Site Thumbnail">
                     <h3>Weather Site using API</h3>
                     <p>A comprehensive weather forecasting application.</p>
-                    <button class="btn" onclick="openModal('weatherSiteModal')">View Site example</button>
+                    <button class="btn" onclick="openModal('weatherSiteModal')">View Site</button>
                     <button class="btn" onclick="openDescriptionModal('weatherDescriptionModal')">View Description</button>
                 </div>
                 <div class="project">
@@ -404,6 +417,10 @@
         </div>
     </div>
 
+    <div id="scrollIndicator" class="scroll-indicator">
+        <span>↓ Scroll Down</span>
+    </div>
     <script src="script.js"></script>
+
 </body>
 </html>
