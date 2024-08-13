@@ -102,6 +102,15 @@
                     <p>Personal blog showcasing various articles and tutorials.</p>
                     <a href="https://weaponxd253.github.io/xavierBlog/" target="_blank" class="btn">View Blog</a>
                 </div>
+                <div class="project">
+                    <img src="assets/images/jeopImg.JPG" alt="Jeopardy Study project image">
+                    <h3>Jeopardy Study Tool</h3>
+                    <p>An interactive study tool inspired by the Jeopardy game.</p>
+                    <a href="https://weaponxd253.github.io/jeopardyStudy/" target="_blank" class="btn">Try it out</a>
+                    <button class="btn" onclick="openDescriptionModal('jeopardyDescriptionModal')">View Description</button>
+                </div>
+                
+                
             </div>
         </div>
     </section>
@@ -417,6 +426,48 @@
         <p>Visit the Weather App to explore its features. For any queries or support, feel free to contact us.</p>
     </div>
         </div>
+        <div id="jeopardyDescriptionModal" class="modal">
+            <span class="close" onclick="closeModal('jeopardyDescriptionModal')">&times;</span>
+            <div class="modal-content">
+                <h2>Jeopardy Study Game</h2>
+        
+                <h3>Project Overview</h3>
+                <p>This project is a dynamic and interactive web-based Jeopardy game designed to facilitate learning across various topics. Users can choose from a range of categories, such as Programming, Animals, Biology, User Design, Basic IT, and SQL Developer. The game loads relevant questions from a dedicated API, presenting them in a familiar Jeopardy board format. Users can test their knowledge, answer questions, and track their score as they progress through the game.</p>
+        
+                <h3>Technical Features</h3>
+        
+                <h4>Custom API Integration</h4>
+                <p>The game is powered by a custom API that I created and maintain. This API serves as the backbone for dynamically loading category-specific questions, ensuring the content is relevant and up-to-date. The API is hosted on GitHub, where I regularly update and expand the question database.</p>
+        
+                <h4>Responsive Design & Typography</h4>
+                <p>The interface features clean, modern typography and a responsive layout that adapts seamlessly to different screen sizes. The carefully chosen fonts ensure readability and a visually appealing experience across devices.</p>
+        
+                <h4>Interactive Gameplay</h4>
+                <p>The game includes a real-time scoring system and a countdown timer for each question, adding a layer of challenge and excitement. The game board dynamically updates based on user interactions, ensuring a smooth and engaging user experience.</p>
+        
+                <h4>Custom Categories</h4>
+                <p>Users have the option to create custom categories, which are then populated with questions fetched from the API. This modular design allows for easy expansion of the game to include new topics without altering the core functionality.</p>
+        
+                <h4>Advanced Animation</h4>
+                <p>GSAP (GreenSock Animation Platform) is used for smooth transitions and animations, enhancing the visual appeal and interactivity. When a question is selected, the modal pops up with a fluid animation, and correct/incorrect answers are animated for immediate feedback.</p>
+        
+                <h4>CSS Styling</h4>
+                <p>The styling adopts a minimalist yet impactful approach, using a dark theme with highlights to make the content stand out. Buttons and interactive elements feature hover effects that provide visual feedback, enhancing the overall user experience.</p>
+        
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML5 & CSS3: For the structure and styling of the game interface.</li>
+                    <li>JavaScript: For dynamic content loading, event handling, and game logic.</li>
+                    <li>GSAP: For animations and transitions that enrich user interaction.</li>
+                    <li>Custom API: A personally developed and maintained API to load questions based on the selected category, available on GitHub here <a href="https://github.com/weaponxd253/JeopardyApi" target="_blank">Jeopardy API</a>.</li>
+                </ul>
+        
+                <h3>Project Goal</h3>
+                <p>The primary goal of this project is to create an engaging and educational platform where users can test and expand their knowledge on various subjects in a fun, game-like environment. The self-maintained API ensures that the content remains fresh and relevant, with potential for further development and customization.</p>
+            </div>
+        </div>
+        
+        
     </div>
 
     <div id="scrollIndicator" class="scroll-indicator">
