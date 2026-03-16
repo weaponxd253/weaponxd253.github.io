@@ -1,479 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xavier Denson | Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Xavier Denson, a software developer with experience in software support, QA, SQL, automation, and user-focused web development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="splashPage" class="splash-page">
-        <div class="splash-content">
-            <img src="assets/images/myLogo.jpg" alt="Logo" class="splash-logo">
-            <h1>Entering Xavier's Portfolio</h1>
-            <button id="enterButton" class="btn">Enter</button>
-        </div>
-    </div>
-    
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="assets/images/myLogo.jpg" alt="Logo">
-                <span>Xavier Denson</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio"">Projects</a></li>
-                    <li><a href="#" id="contactLink">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="theme-switcher">
-                <button id="themeSwitcher">
-                    <span id="themeSwitcherIcon" class="icon">🌙</span> Switch Theme
-                </button>
-            </div>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Go to home section">
+        <img src="assets/images/myLogo.jpg" alt="Xavier Denson logo">
+        <span>Xavier Denson</span>
+      </a>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>where innovative design meets flawless code to create user-friendly, visually stunning websites.</p>
-            <a href="#portfolio" class="btn">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <img src="assets/images/myLogo.jpg" alt="Profile Picture" class="profile-img">
-            <p>Hello! I'm Xavier Denson, a dedicated and passionate software development professional with a robust background in software support, quality assurance, and development. I hold a Bachelor of Science in Software Development and an Associate in Information Technology-Systems & Security from Green River College, as well as an Associate in Information Technology from Pierce College.</p>
-            <p>With over five years of diverse experience in the tech industry, I've honed my skills in software support, quality assurance, and development through various roles. Currently, I serve as a Software Support Specialist at Aero Controls, where I execute SQL scripts, manage support tickets, and ensure data integrity and system performance. My previous experience includes working as a Software Quality Assurance Engineer at Heritage Bank, where I significantly improved production times through automated testing, and as a Software Developer Intern at Costco, where I implemented key features and participated in Agile development processes.</p>
-            <p>My technical expertise includes proficiency in Java, JavaScript, SQL, and MySQL, along with hands-on experience with tools like Docker and Jira. I have a strong foundation in user acceptance testing, hardware/software troubleshooting, and UX research methods and design.</p>
-            <p>I'm committed to continuous learning and improvement, always seeking ways to enhance efficiency and user satisfaction in every project I undertake. My problem-solving skills and collaborative approach have consistently contributed to the success of the teams I've been part of.</p>
-            <p>In my free time, I enjoy exploring new technologies and staying updated with the latest trends in software development. I'm also an avid supporter of open-source projects and enjoy contributing to the tech community.</p>
-            <p>Feel free to connect with me on LinkedIn or reach out via email at <a href="mailto:xdenson253@outlook.com">xdenson253@outlook.com</a>. Let's collaborate and create something amazing together!</p>
-            <div class="resume-links">
-                <a href="assets/documents/Densonx2024.pdf" class="btn download-btn" download aria-label="Download Resume in PDF" data-tooltip="Download the resume in PDF format">Download Resume (PDF)</a>
-                <a href="assets/documents/Densonx2024.docx" class="btn download-btn" download aria-label="Download Resume in Word" data-tooltip="Download the resume in Word format">Download Resume (Word)</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>My Work</h2>
-            <div class="projects"> 
-                <div class="project">
-                    <img src="assets/images/Beesbakry.jpg" alt="bakery image">
-                    <h3>Bee's Bakery UX project</h3>
-                    <p>Delightful bakery app: seamless ordering, quick delivery</p>
-                    <button class="btn" onclick="openModal('myModal1')">View Slideshow</button>
-                    <button class="btn" onclick="openDescriptionModal('descriptionModal1')">View Description</button>
-                </div>
-                <div class="project">
-                    <img src="assets/images/petFinder.jpg" alt="PetFinder image">
-                    <h3>PetFinder UX Project</h3>
-                    <p>Connecting potential pet owners with animals in need of a home.</p>
-                    <button class="btn" onclick="openModal('myModal2')">View Slideshow</button>
-                    <button class="btn" onclick="openDescriptionModal('descriptionModal2')">View Description</button>
-                </div>
-                <div class="project">
-                    <img src="assets/images/weather_site_thumbnail.jpg" alt="Weather Site Thumbnail">
-                    <h3>Weather Site using API</h3>
-                    <p>A comprehensive weather forecasting application.</p>
-                    <button class="btn" onclick="openModal('weatherSiteModal')">View Site</button>
-                    <button class="btn" onclick="openDescriptionModal('weatherDescriptionModal')">View Description</button>
-                </div>
-                <div class="project">
-                    <img src="assets/images/blackjack_thumbnail.jpg" alt="Blackjack Game project image">
-                    <h3>Blackjack X</h3>
-                    <p>A fun and interactive Blackjack game built with JavaScript.</p>
-                    <a href="https://weaponxd253.github.io/blackjack" target="_blank" class="btn">Play Now</a>
-                </div>
-                <div class="project">
-                    <img src="assets/images/xavier_blog.jpg" alt="Xavier's Blog">
-                    <h3>Xavier's Blog</h3>
-                    <p>Personal blog showcasing various articles and tutorials.</p>
-                    <a href="https://weaponxd253.github.io/xavierBlog/" target="_blank" class="btn">View Blog</a>
-                </div>
-                <div class="project">
-                    <img src="assets/images/jeopImg.JPG" alt="Jeopardy Study project image">
-                    <h3>Jeopardy Study Tool</h3>
-                    <p>An interactive study tool inspired by the Jeopardy game.</p>
-                    <a href="https://weaponxd253.github.io/jeopardyStudy/" target="_blank" class="btn">Try it out</a>
-                    <button class="btn" onclick="openDescriptionModal('jeopardyDescriptionModal')">View Description</button>
-                </div>
-                
-                
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/xavier-denson/">LinkedIn</a>
-                <a href="https://github.com/weaponxd253?tab=repositories">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Xavier Denson. All rights reserved.</p>
-            <button id="loginButton" class="btn">Admin Login</button>
-        </div>
-    </footer>
-
-    <button id="backToTop" class="back-to-top">↑ Back to Top</button>
-
-    <div id="loginModal" class="modal">
-        <span class="close" onclick="closeModal('loginModal')">&times;</span>
-        <div class="modal-content">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="postModal" class="modal">
-        <span class="close" onclick="closeModal('postModal')">&times;</span>
-        <div class="modal-content">
-            <h2 id="modalTitle">Add New Post</h2>
-            <form id="postForm">
-                <label for="postTitle">Title</label>
-                <input type="text" id="postTitle" name="title" placeholder="Enter post title" required>
-
-                <label for="postContent">Content</label>
-                <textarea id="postContent" name="content" placeholder="Enter post content" required></textarea>
-
-                <button type="submit">Save Post</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="myModal1" class="modal">
-        <span class="close" onclick="closeModal('myModal1')">&times;</span>
-        <div class="modal-content">
-            <h2>Bee's Bakery Slideshow</h2>
-            <div class="slideshow">
-                <div>
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSHK4W9rkJu8uWh1LsZVt_JNabaaw66Th2aFlHhgYwdg_bs8jtH9GgYdVD23Pqsguh6t5rkX_L7zH5K/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    <div id="descriptionModal1" class="modal">
-        <span class="close" onclick="closeModal('descriptionModal1')">&times;</span>
-        <div class="modal-content">
-            <h2>Bea's Bakery Description</h2>
-            <h3>Overview</h3>
-            <ul>
-                <li>Bea's Bakery mobile application provides a delightful and intuitive experience for users to explore and order a variety of bakery items. The design ensures a seamless navigation through categories, customization options, and an easy checkout process.</li>
-            </ul>
-            
-            <h3>Key Features</h3>
-            <h4>Home Screen</h4>
-            <ul>
-                <li><strong>Promotions and Deals:</strong> Highlights daily deals and special offers with an attractive visual display.</li>
-                <li><strong>Category Navigation:</strong> Allows users to quickly browse through different categories like cakes, cookies, and cupcakes with a swipe functionality.</li>
-            </ul>
-            
-            <h4>Category Browsing</h4>
-            <ul>
-                <li><strong>Visual Category Listings:</strong> Users can browse through tasty categories with appealing images representing each section, such as cookies, cupcakes, cakes, healthy options, and more.</li>
-                <li><strong>Easy Navigation:</strong> Simple and clean interface to move between different categories and select items.</li>
-            </ul>
-            
-            <h4>Order Customization</h4>
-            <ul>
-                <li><strong>Customization Options:</strong> Users can personalize their orders by selecting from various sizes, icing preferences, and adding special requests or messages on cakes.</li>
-                <li><strong>Interactive Elements:</strong> Engaging and interactive UI elements to choose the desired customization easily.</li>
-            </ul>
-            
-            <h4>Order Confirmation</h4>
-            <ul>
-                <li><strong>Payment Details:</strong> Clearly displays the breakdown of costs including the price of items, tips, and total amount.</li>
-                <li><strong>Payment Methods:</strong> Multiple payment options including Credit/Debit cards, PayPal, and cash on delivery.</li>
-                <li><strong>Order Preview:</strong> Visual preview of the order to ensure accuracy before confirming.</li>
-            </ul>
-            
-            <h4>Order Summary</h4>
-            <ul>
-                <li><strong>Summary Display:</strong> Summarizes the order details including items ordered, payment details, and estimated time for completion.</li>
-                <li><strong>Edit and Confirm:</strong> Option to edit the order or proceed to confirm with a final visual confirmation.</li>
-            </ul>
-            
-            <h3>Design Aesthetics</h3>
-            <ul>
-                <li><strong>Color Scheme:</strong> A fresh and vibrant green and pink color palette to create a lively and appetizing visual appeal.</li>
-                <li><strong>Typography:</strong> Playful yet readable fonts to maintain a balance between fun and usability.</li>
-                <li><strong>Imagery:</strong> High-quality images of bakery items to entice users and enhance the browsing experience.</li>
-            </ul>
-        </div>
-    </div>
-    
-    
-    <div id="myModal2" class="modal">
-        <span class="close" onclick="closeModal('myModal2')">&times;</span>
-        <div class="modal-content">
-            <h2>PetFinder Slideshow</h2>
-            <div class="slideshow">
-                <div>
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR324clN3jgCprjaG7dy8lret_lcECBwVdoGUzkDT6v6VLaH8wEa_ITaJpARFWHpF8kd3hviSeQilj0/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="descriptionModal2" class="modal">
-        <span class="close" onclick="closeModal('descriptionModal2')">&times;</span>
-        <div class="modal-content">
-            <h2>Pet Finder Description</h2>
-            
-            <h3>Overview</h3>
-            <ul>
-                <li>The Pet Finder app is a user-friendly platform that connects pet lovers with their ideal companions. Featuring a visually appealing home screen with prominent images of pets and essential details, users can easily browse through various options. The minimalist navigation menu provides easy access to Home, Browse, Surprises, and Contact sections. Users can quickly find pets using the search and browse functionality, which categorizes pets by type. Additionally, the app offers a seamless shopping experience with pet-related products and a contact page for inquiries. Detailed pet pages with comprehensive information and images encourage users to adopt their new pets.</li>
-            </ul>
-            
-            <h3>Home Screen (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Visually Appealing Design:</strong></li>
-                <ul>
-                    <li>Prominent image of featured pets</li>
-                </ul>
-                <li><strong>Navigation Arrows:</strong></li>
-                <ul>
-                    <li>Left and right arrows for scrolling through featured pets</li>
-                </ul>
-                <li><strong>Essential Pet Information:</strong></li>
-                <ul>
-                    <li>Name and breed of each featured pet</li>
-                    <li>"Read More" button for additional details</li>
-                </ul>
-                <li><strong>Social Media Icons:</strong></li>
-                <ul>
-                    <li>Located at the bottom of the screen for easy sharing</li>
-                </ul>
-                <li><strong>Link to "About Us" Page:</strong></li>
-                <ul>
-                    <li>Accessible at the bottom of the screen</li>
-                </ul>
-            </ul>
-            
-            <h3>Navigation Menu (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Hamburger Icon:</strong></li>
-                <ul>
-                    <li>Access to the navigation menu</li>
-                </ul>
-                <li><strong>Slide-Out Menu:</strong></li>
-                <ul>
-                    <li>Options for:</li>
-                    <ul>
-                        <li>Home</li>
-                        <li>Browse</li>
-                        <li>Surprises</li>
-                        <li>Contact</li>
-                    </ul>
-                </ul>
-                <li><strong>Minimalist Design:</strong></li>
-                <ul>
-                    <li>Ensures easy navigation</li>
-                    <li>Keeps user interface clean and uncluttered</li>
-                </ul>
-            </ul>
-            
-            <h3>Browse Screen (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Search Bar:</strong></li>
-                <ul>
-                    <li>Allows users to find pets quickly</li>
-                </ul>
-                <li><strong>Category Selection:</strong></li>
-                <ul>
-                    <li>Options include:</li>
-                    <ul>
-                        <li>Dogs</li>
-                        <li>Cats</li>
-                        <li>Bunnies</li>
-                        <li>Reptiles</li>
-                        <li>Other</li>
-                    </ul>
-                </ul>
-                <li><strong>Featured Pets Display:</strong></li>
-                <ul>
-                    <li>Thumbnail image</li>
-                    <li>Name and breed</li>
-                    <li>Brief description</li>
-                </ul>
-                <li><strong>Detailed Information:</strong></li>
-                <ul>
-                    <li>"More Info" button for each pet</li>
-                </ul>
-            </ul>
-            
-            <h3>Product Page (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Seamless Integration:</strong></li>
-                <ul>
-                    <li>Showcases pet-related products available for purchase</li>
-                </ul>
-                <li><strong>Product Listings:</strong></li>
-                <ul>
-                    <li>Product name</li>
-                    <li>Price</li>
-                    <li>Brief description</li>
-                </ul>
-                <li><strong>Add to Cart Functionality:</strong></li>
-                <ul>
-                    <li>"Add to Cart" button for easy shopping</li>
-                </ul>
-                <li><strong>Enhanced App Functionality:</strong></li>
-                <ul>
-                    <li>Combines pet adoption with a shopping experience</li>
-                </ul>
-            </ul>
-            
-            <h3>Contact Us Page (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Contact Form:</strong></li>
-                <ul>
-                    <li>Fields for name, email, and message</li>
-                </ul>
-                <li><strong>Submit Button:</strong></li>
-                <ul>
-                    <li>Allows users to send their inquiries or messages</li>
-                </ul>
-            </ul>
-            
-            <h3>Pet Detail Page (Desktop and Mobile)</h3>
-            <ul>
-                <li><strong>Pet Information:</strong></li>
-                <ul>
-                    <li>Detailed information about the pet, including name, breed, and description</li>
-                    <li>Additional images of the pet</li>
-                </ul>
-                <li><strong>Call to Action:</strong></li>
-                <ul>
-                    <li>"Meet me" button to encourage adoption or further interaction</li>
-                </ul>
-            </ul>
-        </div>
-    </div>
-
-    <div id="weatherSiteModal" class="modal">
-        <span class="close" onclick="closeModal('weatherSiteModal')">&times;</span>
-        <div class="modal-content">
-            <a href="https://weaponxd253.github.io/weather-site/" target="_blank" class="btn">View Full Site</a>
-            <div class="slideshow">
-                <div>
-                    <iframe src="https://weaponxd253.github.io/weather-site/" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="weatherDescriptionModal" class="modal">
-        <span class="close" onclick="closeModal('weatherDescriptionModal')">&times;</span>
-        <div class="modal-content">
-            <h2>Weather Site Example</h2>
-        <iframe src="https://weaponxd253.github.io/weather-site/" frameborder="0" width="100%" height="480px" allowfullscreen="true"></iframe>
-        <h3>Weather App: UX-Friendly Weather Forecasting</h3>
-        <p>The Weather App is designed with a user-centric approach, providing an intuitive and seamless experience for accessing real-time weather data and forecasts. The interface is clean and responsive, ensuring ease of use across various devices.</p>
-        <h4>Key Features:</h4>
-        <ul>
-            <li><strong>Dynamic City Search:</strong> Utilizes Awesomplete for instant city suggestions as you type.</li>
-            <li><strong>Real-Time Weather Data:</strong> Displays current weather conditions, including temperature, humidity, and wind speed.</li>
-            <li><strong>5-Day Forecast:</strong> Offers a detailed 5-day weather forecast.</li>
-            <li><strong>Weather Themes:</strong> Automatically adjusts the theme based on weather conditions for an engaging visual experience.</li>
-            <li><strong>Accessibility:</strong> Includes features like ARIA labels and descriptions for better accessibility.</li>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+        <ul id="navMenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <h4>Technologies Used:</h4>
-        <ul>
-            <li><strong>HTML & CSS:</strong> For a clean and responsive layout.</li>
-            <li><strong>JavaScript & GSAP:</strong> For dynamic functionality and animations.</li>
-            <li><strong>OpenWeather API:</strong> To fetch real-time weather data.</li>
-        </ul>
-        <p>Visit the Weather App to explore its features. For any queries or support, feel free to contact us.</p>
+      </nav>
+
+      <button id="themeSwitcher" class="theme-switcher" type="button" aria-label="Toggle theme">
+        <span id="themeSwitcherIcon" aria-hidden="true">🌙</span>
+      </button>
     </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Software Developer · QA-minded Builder · SQL & Automation Focused</p>
+          <h1>I build practical software that solves real problems.</h1>
+          <p class="hero-text">
+            I bring experience across software support, development, QA, and user-focused design. My strength is turning messy problems into reliable tools, cleaner workflows, and better experiences.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="assets/documents/Densonx2024.pdf" download>Download Resume</a>
+          </div>
+
+          <ul class="hero-points">
+            <li>Built automation and reporting solutions with Python and SQL</li>
+            <li>Hands-on experience in support, QA, troubleshooting, and web development</li>
+            <li>Focused on clear UX, maintainable code, and business value</li>
+          </ul>
         </div>
-        <div id="jeopardyDescriptionModal" class="modal">
-            <span class="close" onclick="closeModal('jeopardyDescriptionModal')">&times;</span>
-            <div class="modal-content">
-                <h2>Jeopardy Study Game</h2>
-        
-                <h3>Project Overview</h3>
-                <p>This project is a dynamic and interactive web-based Jeopardy game designed to facilitate learning across various topics. Users can choose from a range of categories, such as Programming, Animals, Biology, User Design, Basic IT, and SQL Developer. The game loads relevant questions from a dedicated API, presenting them in a familiar Jeopardy board format. Users can test their knowledge, answer questions, and track their score as they progress through the game.</p>
-        
-                <h3>Technical Features</h3>
-        
-                <h4>Custom API Integration</h4>
-                <p>The game is powered by a custom API that I created and maintain. This API serves as the backbone for dynamically loading category-specific questions, ensuring the content is relevant and up-to-date. The API is hosted on GitHub, where I regularly update and expand the question database.</p>
-        
-                <h4>Responsive Design & Typography</h4>
-                <p>The interface features clean, modern typography and a responsive layout that adapts seamlessly to different screen sizes. The carefully chosen fonts ensure readability and a visually appealing experience across devices.</p>
-        
-                <h4>Interactive Gameplay</h4>
-                <p>The game includes a real-time scoring system and a countdown timer for each question, adding a layer of challenge and excitement. The game board dynamically updates based on user interactions, ensuring a smooth and engaging user experience.</p>
-        
-                <h4>Custom Categories</h4>
-                <p>Users have the option to create custom categories, which are then populated with questions fetched from the API. This modular design allows for easy expansion of the game to include new topics without altering the core functionality.</p>
-        
-                <h4>Advanced Animation</h4>
-                <p>GSAP (GreenSock Animation Platform) is used for smooth transitions and animations, enhancing the visual appeal and interactivity. When a question is selected, the modal pops up with a fluid animation, and correct/incorrect answers are animated for immediate feedback.</p>
-        
-                <h4>CSS Styling</h4>
-                <p>The styling adopts a minimalist yet impactful approach, using a dark theme with highlights to make the content stand out. Buttons and interactive elements feature hover effects that provide visual feedback, enhancing the overall user experience.</p>
-        
-                <h3>Technologies Used</h3>
-                <ul>
-                    <li>HTML5 & CSS3: For the structure and styling of the game interface.</li>
-                    <li>JavaScript: For dynamic content loading, event handling, and game logic.</li>
-                    <li>GSAP: For animations and transitions that enrich user interaction.</li>
-                    <li>Custom API: A personally developed and maintained API to load questions based on the selected category, available on GitHub here <a href="https://github.com/weaponxd253/JeopardyApi" target="_blank">Jeopardy API</a>.</li>
-                </ul>
-        
-                <h3>Project Goal</h3>
-                <p>The primary goal of this project is to create an engaging and educational platform where users can test and expand their knowledge on various subjects in a fun, game-like environment. The self-maintained API ensures that the content remains fresh and relevant, with potential for further development and customization.</p>
+
+        <aside class="hero-card">
+          <img src="assets/images/myLogo.jpg" alt="Portrait or logo for Xavier Denson" class="profile-img">
+          <h2>Currently targeting</h2>
+          <ul>
+            <li>Software Developer</li>
+            <li>QA Engineer / SDET-track roles</li>
+            <li>Application Support Engineer</li>
+            <li>Internal Tools / Automation Developer</li>
+            <li>Remote or hybrid opportunities</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <p class="section-label">About</p>
+        <h2>Technical problem solver with a user-first mindset</h2>
+        <p>
+          I’m Xavier Denson, a software development professional with a Bachelor of Science in Software Development and a Google UX Design Certificate. My background spans software support, QA, development, and database work, which helps me understand both the technical side of systems and the people using them.
+        </p>
+        <p>
+          In my current work, I support business-critical software, automate reporting, work with SQL Server data, and troubleshoot issues efficiently. I enjoy building tools that save time, reduce friction, and make systems easier to use.
+        </p>
+        <p>
+          I’m especially valuable in roles where debugging, collaboration, data work, and practical software delivery all matter.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt-section">
+      <div class="container">
+        <p class="section-label">Experience highlights</p>
+        <h2>What I bring to a team</h2>
+
+        <div class="experience-grid">
+          <article class="info-card">
+            <h3>Software Support & Troubleshooting</h3>
+            <p>Experience diagnosing technical issues, supporting users, and improving reliability in business environments.</p>
+          </article>
+          <article class="info-card">
+            <h3>Development & Automation</h3>
+            <p>Built solutions with JavaScript, Python, and SQL to improve workflows, reporting, and usability.</p>
+          </article>
+          <article class="info-card">
+            <h3>QA & Quality Mindset</h3>
+            <p>Background in software quality assurance with attention to edge cases, testing, and overall user experience.</p>
+          </article>
+          <article class="info-card">
+            <h3>Cross-functional Communication</h3>
+            <p>Able to bridge technical implementation with business needs, documentation, and support conversations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-label">Featured projects</p>
+        <h2>Projects that show how I build</h2>
+        <p class="section-intro">These projects highlight my front-end development, API integration, interactivity, and usability thinking. I’m also expanding this portfolio with more SQL, automation, and testing-focused work.</p>
+
+        <div class="projects-grid">
+          <article class="project-card featured">
+            <img src="assets/images/weather_site_thumbnail.jpg" alt="Screenshot of weather application">
+            <div class="project-content">
+              <span class="project-tag">JavaScript · API Integration</span>
+              <h3>Weather Dashboard</h3>
+              <p>A responsive weather application that surfaces forecast data in a clean, user-friendly interface.</p>
+              <ul>
+                <li>Integrated external weather data</li>
+                <li>Focused on usability and responsive layout</li>
+                <li>Demonstrates front-end logic and real-time data handling</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="https://weaponxd253.github.io/weatherSite/" target="_blank" rel="noopener">Live Demo</a>
+              </div>
             </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/blackjack_thumbnail.jpg" alt="Screenshot of Blackjack X game">
+            <div class="project-content">
+              <span class="project-tag">JavaScript · Game Logic</span>
+              <h3>Blackjack X</h3>
+              <p>An interactive browser-based Blackjack project focused on gameplay logic, state handling, and polished user interaction.</p>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="https://weaponxd253.github.io/blackjack" target="_blank" rel="noopener">Play Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/jeopImg.JPG" alt="Screenshot of Jeopardy study tool">
+            <div class="project-content">
+              <span class="project-tag">JavaScript · Educational Tool</span>
+              <h3>Jeopardy Study Tool</h3>
+              <p>A study application inspired by quiz-game interactions, built to make learning more engaging and structured.</p>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="https://weaponxd253.github.io/jeopardyStudy/" target="_blank" rel="noopener">Try It</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/xavier_blog.jpg" alt="Screenshot of Xavier's blog">
+            <div class="project-content">
+              <span class="project-tag">Content · Front-End</span>
+              <h3>Xavier's Blog</h3>
+              <p>A personal blog project built to publish content and practice clean structure, presentation, and front-end organization.</p>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="https://weaponxd253.github.io/xavierBlog/" target="_blank" rel="noopener">View Blog</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/Beesbakry.jpg" alt="Bee's Bakery UX project thumbnail">
+            <div class="project-content">
+              <span class="project-tag">UX Case Study</span>
+              <h3>Bee's Bakery</h3>
+              <p>A UX-focused concept centered on creating a smoother bakery ordering experience with intuitive flows and clear visual hierarchy.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/petFinder.jpg" alt="PetFinder UX project thumbnail">
+            <div class="project-content">
+              <span class="project-tag">UX Case Study</span>
+              <h3>PetFinder</h3>
+              <p>A concept project designed to help connect potential pet owners with animals in need of homes through clearer browsing and discovery.</p>
+            </div>
+          </article>
         </div>
-        
-        
-    </div>
+      </div>
+    </section>
 
-    <div id="scrollIndicator" class="scroll-indicator">
-        <span>↓ Scroll Down</span>
-    </div>
-    <script src="script.js"></script>
+    <section id="skills" class="section alt-section">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <h2>Core tools and strengths</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>JavaScript, Python, Java, SQL, HTML, CSS</p>
+          </div>
+          <div class="skill-group">
+            <h3>Testing & Support</h3>
+            <p>QA, troubleshooting, debugging, user support, documentation</p>
+          </div>
+          <div class="skill-group">
+            <h3>Data & Tools</h3>
+            <p>SQL Server, MySQL, Postman, Docker, Jira</p>
+          </div>
+          <div class="skill-group">
+            <h3>Workflow</h3>
+            <p>Agile, UX thinking, process improvement, accessibility-minded development</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="contact" class="section">
+      <div class="container contact-card">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let’s connect</h2>
+          <p>I’m open to opportunities where I can contribute as a developer, problem solver, and teammate. The fastest way to reach me is by email or LinkedIn.</p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:xdenson253@outlook.com?subject=Opportunity%20for%20Xavier%20Denson">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/xavier-denson/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/weaponxd253?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Xavier Denson. Built to showcase practical software skills and real-world value.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
